@@ -1,0 +1,19 @@
+# Example terraform.tfvars file
+# Copy this file to terraform.tfvars and modify the values as needed
+
+aws_region = "sa-east-1"
+app_name = "mid-nextjs-poc"
+ecr_repository_name = "mid-nextjs-poc"
+ecs_cluster_name = "mid-nextjs-poc-54yeg2"
+container_port = 3000
+task_cpu = "256"
+task_memory = "512"
+service_desired_count = 2
+environment = "production"
+
+tags = {
+  Environment = "production"
+  Project     = "mid-nextjs-poc"
+  ManagedBy   = "terraform"
+  Owner       = "your-team"
+} 
