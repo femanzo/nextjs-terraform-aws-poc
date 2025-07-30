@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Mock product data - same as in the dynamic routes
 const products = {
@@ -93,9 +94,11 @@ export default function ProductsPage() {
                 
                 {featuredProduct && (
                   <div className="relative h-48 bg-gray-100">
-                    <img 
+                    <Image 
                       src={featuredProduct.image} 
                       alt={featuredProduct.name}
+                      width={400}
+                      height={300}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-4">

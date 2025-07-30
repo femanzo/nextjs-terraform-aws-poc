@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface UserProfilePageProps {
   params: Promise<{
@@ -72,9 +73,11 @@ export default async function UserProfilePage({ params }: UserProfilePageProps) 
       
       <div className="bg-white rounded-lg shadow-lg p-8">
         <div className="flex items-center mb-6">
-          <img 
+          <Image 
             src={user.avatar} 
             alt={user.name}
+            width={80}
+            height={80}
             className="w-20 h-20 rounded-full mr-6"
           />
           <div>

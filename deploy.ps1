@@ -4,7 +4,7 @@ $AWS_PROFILE = "personal"
 $APP_NAME = "mid-nextjs-poc"
 $ECR_REPOSITORY_NAME = "mid-nextjs-poc"
 $ECS_CLUSTER_NAME = "mid-nextjs-poc-54yeg2"
-$DOMAIN_NAME = "next.ez.run"  # Set this to your domain name (e.g., "app.example.com") to enable HTTPS
+$DOMAIN_NAME = ""  # Set this to your domain name (e.g., "app.example.com") to enable HTTPS
 
 # Set AWS profile for Terraform
 $env:AWS_PROFILE = $AWS_PROFILE

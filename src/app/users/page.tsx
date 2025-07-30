@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Mock user data - same as in the dynamic route
 const users = {
@@ -44,9 +45,11 @@ export default function UsersPage() {
           <Link key={id} href={`/users/${id}`}>
             <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer">
               <div className="flex items-center mb-4">
-                <img 
+                <Image 
                   src={user.avatar} 
                   alt={user.name}
+                  width={64}
+                  height={64}
                   className="w-16 h-16 rounded-full mr-4"
                 />
                 <div>

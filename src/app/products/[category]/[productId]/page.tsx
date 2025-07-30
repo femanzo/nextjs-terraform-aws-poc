@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface ProductPageProps {
   params: Promise<{
@@ -122,9 +123,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
       
       <div className="grid md:grid-cols-2 gap-12">
         <div>
-          <img 
+          <Image 
             src={typedProduct.image} 
             alt={typedProduct.name}
+            width={600}
+            height={400}
             className="w-full rounded-lg shadow-lg"
           />
         </div>

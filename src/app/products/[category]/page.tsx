@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface CategoryPageProps {
   params: Promise<{
@@ -88,9 +89,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         {Object.entries(categoryProducts).map(([productId, product]) => (
           <Link key={productId} href={`/products/${category}/${productId}`}>
             <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-              <img 
+              <Image 
                 src={product.image} 
                 alt={product.name}
+                width={400}
+                height={300}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
